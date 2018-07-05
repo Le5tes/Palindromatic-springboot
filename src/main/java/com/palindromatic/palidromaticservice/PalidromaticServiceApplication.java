@@ -9,4 +9,8 @@ public class PalidromaticServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PalidromaticServiceApplication.class, args);
 	}
+
+	public boolean check(String palindrome) {
+		return (palindrome == "hihih");
+	};
 }
