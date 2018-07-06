@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -20,5 +21,10 @@ public class PalidromaticServiceControllerTests {
     @Test
     public void serverIsRunning ()  throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/")).andExpect(status().isOk());
+    }
+
+    @Test
+    public void returnsIfIsAPalindrome () throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/check/eevee")).andExpect(content().string("true"));
     }
 }

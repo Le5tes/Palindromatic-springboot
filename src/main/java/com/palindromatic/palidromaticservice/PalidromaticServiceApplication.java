@@ -11,6 +11,6 @@ public class PalidromaticServiceApplication {
 	}
 
 	public boolean check(String palindrome) {
-		return (palindrome == "hihih");
+		return (palindrome.equals(new StringBuilder(palindrome).reverse().toString()));
 	};
 }

@@ -14,6 +14,7 @@ public class PalidromaticServiceApplicationTests {
         PalidromaticServiceApplication myPalindromatic = new PalidromaticServiceApplication();
 
         Assert.assertTrue(myPalindromatic.check("hihih"));
+//        Assert.assertFalse(myPalindromatic.check("hihi"));
 
 	}
 

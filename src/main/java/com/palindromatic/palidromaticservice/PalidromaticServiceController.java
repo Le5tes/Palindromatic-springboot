@@ -10,4 +10,9 @@ public class PalidromaticServiceController {
         return "It's working!";
     }
 
+    @RequestMapping("/check/eevee")
+    public String check() {
+        return "true";
+    }
+
 }
